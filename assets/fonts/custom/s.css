@@ -1,1 +1,89 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MyriadPro-Regular.woff2') format('woff2'),
+        url('MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Black.woff2') format('woff2'),
+        url('Nexa-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans';
+    src: url('SFTSchriftedSans-Bold.woff2') format('woff2'),
+        url('SFTSchriftedSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CentraleSans Book';
+    src: url('CentraleSansBold.woff2') format('woff2'),
+        url('CentraleSansBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa XBold';
+    src: url('Nexa-XBold.woff2') format('woff2'),
+        url('Nexa-XBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CentraleSans';
+    src: url('CentraleSansLight.woff2') format('woff2'),
+        url('CentraleSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SFT Schrifted Sans';
+    src: url('SFTSchriftedSans-ExtraLight.woff2') format('woff2'),
+        url('SFTSchriftedSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Centrale Sans';
+    src: url('CentraleSans-Medium.woff2') format('woff2'),
+        url('CentraleSans-Medium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aligarh Arabic';
+    src: url('AligarhArabic-Light.woff2') format('woff2'),
+        url('AligarhArabic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aligarh Arabic';
+    src: url('AligarhArabic-Bold.woff2') format('woff2'),
+        url('AligarhArabic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
