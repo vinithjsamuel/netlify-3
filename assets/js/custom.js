@@ -29,6 +29,16 @@ $( document ).ready(function() {
     }
   });
 
+  $('body').on('click','.js-scroll-trigger-same-page', function(){
+    var _scrollToId = $(this).attr('href');
+    if ($(_scrollToId).length) {
+      $('html, body').animate({
+        scrollTop: ($(_scrollToId).offset().top - 72)
+      }, 500, "easeInOutExpo");
+      return false;
+    }
+  })
+
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
     $('body').removeClass('sidebar-show');

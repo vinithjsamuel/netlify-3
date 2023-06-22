@@ -667,6 +667,9 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   right: auto;
   left: 1rem;
 }
+.swiper-button-next, .swiper-button-prev{
+  z-index: 8;
+}
 @media (max-width: 991.98px) {
   .main-menu{
     -webkit-transition: all 0.5s ease;
@@ -700,6 +703,11 @@ html[dir="rtl"] .campaign-visual-floating-logo{
       top: 50%;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
+  }
+  html[dir="rtl"] .mega-menu li a:before{
+    right: -0.5rem;left: auto;
+    -webkit-transform: translateY(-50%) rotateY(180deg);
+    transform: translateY(-50%) rotateY(180deg);
   }
   body.sidebar-show .main-menu{
     -webkit-transform: translate(0rem, 0rem);
