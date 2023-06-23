@@ -44,7 +44,8 @@
   --causes-rounded-block-arrow:url('../img/icon/causes/arrow-down.svg');
   --causes-rounded-main-bg:url('../img/banners/causes-section.png');
   --surgical-rounded-main-bg:url('../img/banners/surgical-section.png');
-  --preloader-icon:url('../img/logo/preloader-animate.svg');
+  --preloader-icon-old:url('../img/logo/preloader-animate.svg');
+  --preloader-icon:url('../img/logo/preloader.gif');
   --swiper-navigation-size: 30px;
   --swiper-theme-color: var(--theme-secondary-color);
   --bs-body-color: var(--theme-primary-color);
@@ -639,6 +640,7 @@ html[dir="rtl"] .custom-icon-list li:before{
   height: 100vh;
   text-align: center;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
 }
@@ -646,7 +648,7 @@ html[dir="rtl"] .custom-icon-list li:before{
   content: "";
   position: absolute;
   background-image: var(--preloader-icon);
-  background-size: cover;
+  background-size: 800px;
   background-position: center;
   width: 300px;
   height: 300px;
