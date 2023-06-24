@@ -45,7 +45,7 @@
   --causes-rounded-main-bg:url('../img/banners/causes-section.png');
   --surgical-rounded-main-bg:url('../img/banners/surgical-section.png');
   --preloader-icon-old:url('../img/logo/preloader-animate.svg');
-  --preloader-icon:url('../img/logo/preloader.gif');
+  --preloader-icon:url('../img/logo/preloader.gif?v=1.1');
   --swiper-navigation-size: 30px;
   --swiper-theme-color: var(--theme-secondary-color);
   --bs-body-color: var(--theme-primary-color);
