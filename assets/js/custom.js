@@ -235,7 +235,7 @@ $( document ).ready(function() {
 
   setTimeout(function () {
     $('.preloader').fadeOut();
-  }, 2000);
+  }, 2500);
 
 });
 
