@@ -48,6 +48,14 @@ $( document ).ready(function() {
     $('body').toggleClass('sidebar-show');
   })
 
+  $('body').on('click','.ps-primary-rounded-block', function(){
+    $(this).next('.ps-primary-rounded-block-text').toggleClass('hide');
+  })
+
+  $('body').on('click','.complications-square-block', function(){
+    $(this).toggleClass('hide');
+  })
+
   if($('.text-typed').length){
     $( ".text-typed" ).each(function( index ) {
       var _type_text = $( this ).data('text');

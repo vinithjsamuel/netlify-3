@@ -1,7 +1,7 @@
 @import url("../fonts/custom/s.css");
 :root{
   --bs-body-font-family:'CentraleSans';
-  --bs-body-font-family-bold: 'CentraleSans Book';
+  --bs-body-font-family-bold: 'CentraleSans';
   --bs-title-font-family: 'SFT Schrifted Sans';
   --bs-body-font-size: 1.1rem;
   --theme-primary-color: #473575;
@@ -12,6 +12,9 @@
   --theme-secondary-color-rgb: 174,162,207;
   --bs-dark: var(--theme-primary-color);
   --bs-dark-rgb: var(--theme-primary-color-rgb);
+  --bg-dark-color-level-2: #5B5081;
+  --bg-dark-color-level-3: #726b8f;
+  --bg-dark-color-level-4: #aea2cf;
   --bs-secondary: var(--theme-secondary-color);
   --bs-secondary-rgb: var(--theme-secondary-color-rgb);
   --bs-link-color: #ffffff;
@@ -37,8 +40,10 @@
   --hyperhidrosis-main-bg:url('../img/banners/model-with-headset.jpg');
   --diagnosis-main-bg:url('../img/banners/diagnosis-section.jpg');
   --complications-main-bg:url('../img/banners/complications-section.jpg');
-  --primary-secondary-bg:url('../img/bg/primary-secondary-arrow.svg');
+  --complications-block-bg:url('../img/bg/comp-block-bg.svg');
   --description-highlight-bg:url('../img/bg/description-highlight-bg.svg');
+  --primary-secondary-bg:var(--description-highlight-bg);
+  --primary-secondary-title-arrow:url('../img/icon/title-arrow.svg');
   --treat-bg:url('../img/bg/surgical-bg.svg');
   --life-style-bg:url('../img/banners/life-style.jpg');
   --causes-rounded-block-arrow:url('../img/icon/causes/arrow-down.svg');
@@ -71,6 +76,7 @@ html[dir="rtl"] .font-en{
 p{text-align: justify;}
 .font-en-bold{
   font-family: var(--bs-body-font-family-bold);
+  font-weight: 900;
 }
 .btn{
   --bs-btn-border-radius: 2rem;
@@ -221,6 +227,15 @@ footer:before{
 }
 .nav-link.hover-line:hover:before{
   width: 50%;
+}
+.bg-dark-level-2{
+  background-color: var(--bg-dark-color-level-2);
+}
+.bg-dark-level-3{
+  background-color: var(--bg-dark-color-level-3);
+}
+.bg-dark-level-4{
+  background-color: var(--bg-dark-color-level-4);
 }
 @keyframes textclip {
   to {
@@ -420,12 +435,15 @@ img.tagline-logo{
   position: absolute;
   content: "";
   background-image: var(--gender-icon);
-  background-position: top;
-  background-size: cover;
+  background-position: left;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
   height: 60%;
   bottom: 0;left: 0;
+}
+html[dir="rtl"] .bg-gender:before{
+  background-position: right;
 }
 .reference-bg,.reference-bg-logo-none{position: relative;}
 .icons-carousel-value{
@@ -443,6 +461,7 @@ img.tagline-logo{
     align-items: center;
     justify-content: center;
     z-index: 1;
+    cursor: pointer;
 }
 .ps-primary-rounded-block-text{
   border: 2px solid var(--theme-primary-color);
@@ -452,11 +471,18 @@ img.tagline-logo{
     margin-top: -3rem;
     z-index: 0;
     min-height: 250px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .mh-55-px{min-height: 55px;}
 .mh-45-rem{min-height: 4.5rem;}
 .ps-primary-rounded-block-text{
   border: 1px solid var(--theme-primary-color);
+}
+.ps-primary-rounded-block-text.hide{
+  height: 0;min-height: 0;
+  padding-top: 0rem;border-color: #fff;
+  overflow: hidden;
 }
 .causes-rounded-block{
   position: relative;
@@ -570,7 +596,6 @@ html[dir="rtl"] .life-style-bg:before{
 .custom-icon-list li{
   list-style: none;
   position: relative;
-  margin-top: 0.5rem;
 }
 .custom-icon-list li:before{
   position: absolute;
@@ -590,12 +615,31 @@ html[dir="rtl"] .custom-icon-list li:before{
 .custom-icon-list.list-icon-1 li:before{
   background-image: var(--custom-list-icon-1);
 }
+html[dir="rtl"] img.flip-img-only-ar{
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 .custom-icon-list.list-icon-2 li:before{
   background-image: var(--custom-list-icon-2);
+  top: 3px;
+  transform: none;
 }
 .complications-square-block .csb-header{
+  cursor: pointer;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+  position: relative;
+}
+.complications-square-block .csb-header:before{
+  position: absolute;
+  content: "";
+  background-image: var(--complications-block-bg);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  left: 0;top: 0;
 }
 .complications-square-block .csb-body{
   position: relative;
@@ -604,31 +648,41 @@ html[dir="rtl"] .custom-icon-list li:before{
   padding-top: 2rem;
   border: 2px solid var(--theme-primary-color);
   border-bottom-right-radius: 25px;
+  border-top: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.accordion{
+.complications-square-block.hide .csb-body{
+  height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+.accordion.accordion-dark{
   --bs-accordion-btn-focus-box-shadow:none;
 }
-.accordion-button::after{
+.accordion-dark .accordion-button::after{
   --bs-accordion-btn-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-.accordion-button:not(.collapsed)::after{
+.accordion-dark .accordion-button:not(.collapsed)::after{
   --bs-accordion-btn-active-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-.accordion[dir="ltr"] .accordion-button::after{
+.accordion.accordion-dark[dir="ltr"] .accordion-button::after{
   margin-left:auto;
   margin-right:unset;
 }
-.accordion.accordion-flush .accordion-item button{
+.accordion.accordion-dark.accordion-flush .accordion-item button{
   background-color: var(--theme-primary-color);
 }
-.accordion.accordion-flush .accordion-item:nth-child(2) button{
-  background-color: #5b5081;
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(2) button{
+  background-color: var(--bg-dark-color-level-2);
 }
-.accordion.accordion-flush .accordion-item:nth-child(3) button{
-  background-color: #726b8f;
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(3) button{
+  background-color: var(--bg-dark-color-level-3);
 }
-.accordion.accordion-flush .accordion-item:nth-child(4) button{
-  background-color: #aea2cf;
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4) button{
+  background-color: var(--bg-dark-color-level-4);
 }
 .preloader {
   position: fixed;
@@ -672,6 +726,9 @@ html[dir="rtl"] .campaign-visual-floating-logo{
 }
 .swiper-button-next, .swiper-button-prev{
   z-index: 8;
+}
+.reference-bg .accordion-body{
+  color: var(--theme-primary-color);
 }
 @media (max-width: 991.98px) {
   .main-menu{
@@ -901,17 +958,20 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   }
   .diagnosis-main-bg:before{
     background-image: var(--diagnosis-main-bg);
+    background-size: contain;
   }
   html[dir="rtl"] .diagnosis-main-bg:before{
     left: 0;right: auto;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    background-position: left;
   }
   .complications-main-bg:before{
     background-image: var(--complications-main-bg);
+    background-size: contain;
+    background-position: right;
   }
   html[dir="rtl"] .complications-main-bg:before{
     left: 0;right: auto;
+    background-position: left;
   }
   .primary-secondary-bg:before,.description-highlight-bg:before{
     position: absolute;
@@ -923,6 +983,33 @@ html[dir="rtl"] .campaign-visual-floating-logo{
     width: 35%;
     height: 100%;
     top: 0;left: 0;z-index: -1;
+  }
+  .primary-secondary-bg .title-arrow:before{
+    position: absolute;
+    content: "";
+    background-image: var(--primary-secondary-title-arrow);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 100px;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    overflow: hidden;
+  }
+  html[dir="rtl"] .primary-secondary-bg .title-arrow:before{
+    left: -75px;right: auto;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .primary-secondary-bg .title-arrow.title-arrow-secondary:before{
+    top: -35px;
+    right: 5px;
+  }
+  html[dir="rtl"] .primary-secondary-bg .title-arrow.title-arrow-secondary:before{
+    top: 0;
+    left: -80px;
   }
   html[dir="rtl"] .primary-secondary-bg:before,html[dir="rtl"] .description-highlight-bg:before{
     left: auto;right: 0;
@@ -946,8 +1033,6 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   }
   html[dir="rtl"] .causes-rounded-main-bg:before{
     left: 0;right: auto;
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
   }
   .surgical-rounded-main-bg:before{
     background-image: var(--surgical-rounded-main-bg);
