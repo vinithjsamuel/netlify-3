@@ -25,6 +25,8 @@
   --menu-icon-close:url('../img/icon/close-w.svg');
   --menu-list-icon:url('../img/icon/menu-arrow.svg');
   --menu-bg:url('../img/bg/menu-bg.svg');
+  --menu-bg-level-1:url('../img/bg/menu-bg-level-1.svg');
+  --menu-bg-level-2:url('../img/bg/menu-bg-level-2.svg');
   --btn-icon-dark:url('../img/logo/icon.svg');
   --video-play-icon: url('../img/icon/play-w.svg');
   --video-pause-icon: url('../img/icon/pause-w.svg');
@@ -100,6 +102,9 @@ p{text-align: justify;}
 }
 .btn-outline-dark{
   --bs-btn-border-color: var(--theme-primary-color);
+}
+.btn-outline-light{
+  --bs-btn-active-color: var(--theme-primary-color);
 }
 .btn-outline-secondary {
     --bs-btn-color: var(--theme-secondary-color);
@@ -198,6 +203,12 @@ html[dir="rtl"] .menu-icon{
   width: 100%;height: 100%;
   left: 0;top: 0;
   overflow: hidden;
+}
+.topbar.menu-bg-level-1:before{
+  background-image: var(--menu-bg-level-1);
+}
+.topbar.menu-bg-level-2:before{
+  background-image: var(--menu-bg-level-2);
 }
 footer:before{
   background-size: cover;
