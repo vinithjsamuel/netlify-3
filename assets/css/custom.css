@@ -55,6 +55,7 @@
   --swiper-theme-color: var(--theme-secondary-color);
   --bs-body-color: var(--theme-primary-color);
   --bs-btn-color: var(--theme-primary-color);
+  --bs-btn-active-color: var(--theme-primary-color);
   --swiper-navigation-sides-offset: 0px;
 }
 html[dir="rtl"]{
