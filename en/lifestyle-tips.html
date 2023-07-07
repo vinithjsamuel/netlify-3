@@ -15,7 +15,7 @@
 
     <title>BEAT THE SWEAT - Lifestyle Tips</title>
               <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/custom.css?v=2.102"/>
   </head>
   <body>
@@ -24,16 +24,19 @@
 
 </header>
 <nav id="mainNavbar" class="topbar menu-bg-level-1 py-3">
-  <div class="container-fluid container-xl position-relative">
+  <div class="container-fluid position-relative">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-3 col-lg-2">
         <a class="navbar-brand" href="en">
           <img src="assets/img/logo/logo.svg" alt="BEAT THE SWEAT">
         </a>
       </div>
-      <div class="col-4 col-lg-8">
+      <div class="col-4 col-lg-8 col-xxl-6 offset-xxl-2 mx-lg-auto">
         <div class="main-menu">
-          <ul class="nav flex-column flex-lg-row position-relative justify-content-start align-items-start align-items-lg-center py-2">
+          <ul class="nav flex-column flex-lg-row position-relative justify-content-start justify-content-xxl-around align-items-start align-items-lg-center py-2">
+            <li class="nav-item mb-2 mb-lg-0 position-relative d-lg-none">
+              <a class="nav-link js-scroll-trigger py-1 hover-line" href="en/">HOME</a>
+            </li>
             <li class="nav-item mb-2 mb-lg-0 position-relative">
               <a class="nav-link js-scroll-trigger py-1" href="en/hyperhidrosis-facts">HYPERHIDROSIS FACTS</a>
               <ul class="mega-menu">
@@ -138,10 +141,10 @@
     <div class="container-fluid">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-xl-10 col-12 py-5">
-      <div class="row d-flex justify-content-center align-items-start">
-        <div class="col-lg-6">
+      <div class="row d-flex justify-content-center align-items-start py-lg-5 my-lg-5">
+        <div class="col-lg-6 py-lg-3">
           <div class="row d-flex justify-content-center align-items-start">
-            <div class="col-4">
+            <div class="col-md-4">
               <div class="d-flex justify-content-center">
                 <h1 class="h2 fw-bold display-6 text-animate pb-2">DOs</h1>
                 <span class="fw-bold">1</span>
@@ -150,7 +153,7 @@
                 <img height="160" src="assets/img/icon/lifestyle/do.svg" alt="lifestyle dos">
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8 pt-3 pt-md-0">
 
                               <ul class="custom-icon-list list-icon-2 pt-lg-3">
                   <li>Wear loose-fitting clothes to minimise signs of sweating.</li>
@@ -163,7 +166,7 @@
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0">
           <div class="row d-flex justify-content-center align-items-start">
-            <div class="col-4">
+            <div class="col-md-4">
               <div class="d-flex justify-content-center">
                 <h1 class="h2 fw-bold display-6 text-animate pb-2">DON'Ts</h1>
                 <span class="fw-bold">1</span>
@@ -172,7 +175,7 @@
                 <img height="160" src="assets/img/icon/lifestyle/dont.svg" alt="lifestyle donts">
               </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8 pt-3 pt-md-0">
 
                               <ul class="custom-icon-list list-icon-2 pt-lg-3">
                   <li>Do not wear tight clothes or synthetic fabrics – for example, nylon.</li>
@@ -233,11 +236,11 @@
           <div class="accordion accordion-flush">
             <div class="accordion-item mb-1 border-0">
               <div class="accordion-header">
-                <button class="border-0 p-0 bg-transparent shadow-none h1 fw-bold display-4 text-animate collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse0" aria-expanded="false" aria-controls="flush-collapse0">
+                <button class="border-0 p-0 bg-transparent shadow-none h1 fw-bold display-4 text-animate" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse0" aria-expanded="true" aria-controls="flush-collapse0">
                   REFERENCES:
                 </button>
               </div>
-              <div id="flush-collapse0" class="accordion-collapse collapse" data-bs-parent="#accordionFlushFaqs">
+              <div id="flush-collapse0" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushFaqs">
                 <div class="accordion-body">
                   <ol class="font-en">
                     <li><a class="text-dark" href="https://www.nhs.uk/conditions/excessive-sweating-hyperhidrosis/" target="_blank">https://www.nhs.uk/conditions/excessive-sweating-hyperhidrosis/</a> last accessed May 23.</li>
@@ -267,7 +270,7 @@
 </main>
 
 <footer class="position-relative pt-5 pb-2">
-  <div class="container-fluid container-md position-relative">
+  <div class="container-fluid position-relative">
 
     <div class="row d-flex align-items-center justify-content-between">
       <div class="col-md-4 pb-5 pb-md-0">
@@ -276,7 +279,7 @@
         </a>
       </div>
 
-      <div class="col-md-4 pb-5 pb-md-0">
+      <div class="col-md-4 pb-5 pb-md-0 text-md-center">
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="en/terms-and-conditions" class="nav-link text-white d-inline-block hover-line">Terms & Conditions</a></li>
         </ul>
@@ -311,8 +314,8 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
 <script src="assets/js/custom.js?v=2.102" charset="utf-8"></script>
 </body>
 </html>

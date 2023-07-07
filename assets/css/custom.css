@@ -39,7 +39,7 @@
   --reference-bg-logo-none:url('../img/bg/reference-bg-logo-none.svg');
   --custom-list-icon-1: url('../img/icon/list-icon-1.svg');
   --custom-list-icon-2: url('../img/icon/lifestyle/list-icon.svg');
-  --hyperhidrosis-main-bg:url('../img/banners/model-with-headset.jpg');
+  --hyperhidrosis-main-bg:url('../img/banners/model-with-headset.jpg?v=1.1');
   --diagnosis-main-bg:url('../img/banners/diagnosis-section.jpg');
   --complications-main-bg:url('../img/banners/complications-section.jpg');
   --complications-block-bg:url('../img/bg/comp-block-bg.svg');
@@ -49,7 +49,7 @@
   --treat-bg:url('../img/bg/surgical-bg.svg');
   --life-style-bg:url('../img/banners/life-style.jpg');
   --causes-rounded-block-arrow:url('../img/icon/causes/arrow-down.svg');
-  --causes-rounded-main-bg:url('../img/banners/causes-section.png');
+  --causes-rounded-main-bg:url('../img/banners/causes-section.png?v=1.1');
   --surgical-rounded-main-bg:url('../img/banners/surgical-section.png');
   --preloader-icon-old:url('../img/logo/preloader-animate.svg');
   --preloader-icon:url('../img/logo/preloader-v2.gif?v=1.4');
@@ -181,8 +181,8 @@ p{text-align: justify;}
     z-index: 11;
 }
 html[dir="rtl"] .menu-icon{
-  margin-right: auto;
-  margin-left: unset;
+  margin-right: unset;
+  margin-left: auto;
 }
 .topbar{
   position: fixed;
@@ -717,8 +717,8 @@ html[dir="rtl"] img.flip-img-only-ar{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%) scale(2);
@@ -757,12 +757,8 @@ html[dir="rtl"] .campaign-visual-floating-logo{
     -webkit-transform: translate(-25rem, 0rem);
     transform: translate(-25rem, 0rem);
     z-index: 11;
-  }
-  html[dir="rtl"] .main-menu{
-    -webkit-transform: translate(25rem, 0rem);
-    transform: translate(25rem, 0rem);
-    left: auto;
-    right: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .mega-menu li a:before,.plan-list li a:before{
     content: "";
@@ -805,7 +801,7 @@ html[dir="rtl"] .campaign-visual-floating-logo{
     position: fixed;
     left: 0;top: 0;
     width: 0%;height: 100vh;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.3);
     z-index: 10;
   }
   body.sidebar-show .sidebar-overlay{
@@ -968,9 +964,13 @@ html[dir="rtl"] .campaign-visual-floating-logo{
     height: 100%;
     top: 0;right: 0;
   }
+  .hyperhidrosis-main-bg:before{
+    background-position: bottom left;
+  }
   .diagnosis-main-bg:before{
     background-image: var(--diagnosis-main-bg);
     background-size: contain;
+    background-position: right;
   }
   html[dir="rtl"] .diagnosis-main-bg:before{
     left: 0;right: auto;
@@ -1045,6 +1045,7 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   }
   html[dir="rtl"] .causes-rounded-main-bg:before{
     left: 0;right: auto;
+    background-position: right;
   }
   .surgical-rounded-main-bg:before{
     background-image: var(--surgical-rounded-main-bg);
