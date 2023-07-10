@@ -687,13 +687,16 @@ html[dir="rtl"] img.flip-img-only-ar{
 .accordion.accordion-dark.accordion-flush .accordion-item button{
   background-color: var(--theme-primary-color);
 }
-.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(2) button{
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(2) button,
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4n+2) button{
   background-color: var(--bg-dark-color-level-2);
 }
-.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(3) button{
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(3) button,
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4n+3) button{
   background-color: var(--bg-dark-color-level-3);
 }
-.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4) button{
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4) button,
+.accordion.accordion-dark.accordion-flush .accordion-item:nth-child(4n+4) button{
   background-color: var(--bg-dark-color-level-4);
 }
 .preloader {
