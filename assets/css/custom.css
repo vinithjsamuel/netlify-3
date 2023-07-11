@@ -60,6 +60,9 @@
   --bs-btn-active-color: var(--theme-primary-color);
   --swiper-navigation-sides-offset: 0px;
 }
+main.home{
+  --swiper-navigation-sides-offset: 5px;
+}
 html[dir="rtl"]{
   --bs-body-font-family: 'Aligarh Arabic';
   --bs-title-font-family: 'Aligarh Arabic';
@@ -76,7 +79,7 @@ html[dir="rtl"] .font-en{
   --bs-title-font-family: 'SFT Schrifted Sans';
   direction: ltr;
 }
-p{text-align: justify;}
+html[lang="en"] p{text-align: justify;}
 .font-en-bold{
   font-family: var(--bs-body-font-family-bold);
   font-weight: 900;
@@ -510,8 +513,9 @@ html[dir="rtl"] .bg-gender:before{
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding-top: 2.5rem;
+    padding-top: 3.5rem;
     background-color: #fff;
+    line-height: 1rem;
 }
 .causes-rounded-block .causes-rounded-block-icon-circle{
   position: absolute;
@@ -539,6 +543,9 @@ html[dir="rtl"] .bg-gender:before{
     animation: arrow-slide-down 2s infinite ease-in-out;
     opacity: 0;
 }
+.causes-rounded-block.hide-arrow::before{
+  content: unset;
+}
 
 .causes-rounded-block-body{
   height: auto;
@@ -547,6 +554,7 @@ html[dir="rtl"] .bg-gender:before{
     top: 0rem;
     color: #fff;
     padding: 1rem;
+    line-height: 1rem;
     background-color: var(--theme-primary-color);
     border-radius: 25px;
 }
@@ -671,6 +679,9 @@ html[dir="rtl"] img.flip-img-only-ar{
     padding-bottom: 0;
     border: 0;
 }
+.accordion{
+  --bs-accordion-color: var(--theme-primary-color);
+}
 .accordion.accordion-dark{
   --bs-accordion-btn-focus-box-shadow:none;
 }
@@ -744,6 +755,7 @@ html[dir="rtl"] .campaign-visual-floating-logo{
 }
 .reference-bg .accordion-body{
   color: var(--theme-primary-color);
+  overflow-x: scroll;
 }
 @media (max-width: 991.98px) {
   .main-menu{
