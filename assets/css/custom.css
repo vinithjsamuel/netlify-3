@@ -755,7 +755,7 @@ html[dir="rtl"] .campaign-visual-floating-logo{
 }
 .reference-bg .accordion-body{
   color: var(--theme-primary-color);
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 @media (max-width: 991.98px) {
   .main-menu{
