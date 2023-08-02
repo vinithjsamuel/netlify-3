@@ -505,21 +505,21 @@ html[dir="rtl"] .bg-gender:before{
   overflow: hidden;
 }
 .causes-rounded-block,.causes-rounded-block .causes-rounded-block-icon-circle{
-  height: 10rem;
-    width: 10rem;
+  height: 12rem;
+    width: 12rem;
     text-align: center;
     padding: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    padding-top: 3.5rem;
+    padding-top: 4rem;
     background-color: #fff;
     line-height: 1rem;
 }
 .causes-rounded-block .causes-rounded-block-icon-circle{
   position: absolute;
-  top: -6rem;
+  top: -7rem;
   align-items: end;
   background-color: var(--theme-primary-color);
 }
@@ -549,12 +549,12 @@ html[dir="rtl"] .bg-gender:before{
 
 .causes-rounded-block-body{
   height: auto;
-    width: 12rem;
+    width: 13rem;
     position: relative;
     top: 0rem;
     color: #fff;
     padding: 1rem;
-    line-height: 1rem;
+    line-height: 1.2rem;
     background-color: var(--theme-primary-color);
     border-radius: 25px;
 }
@@ -567,9 +567,9 @@ html[dir="rtl"] .bg-gender:before{
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    top: -10rem;
-    width: 12rem;
-    height: 12rem;
+    top: -12rem;
+    width: 13rem;
+    height: 14rem;
     border-radius: 50%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
