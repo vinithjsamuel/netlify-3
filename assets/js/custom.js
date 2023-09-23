@@ -89,6 +89,15 @@ $( document ).ready(function() {
       }
       lastScrollTop = st;
       didScroll = false;
+
+      /*Add class if main section is scrolled away - start*/
+      if(st > (window.innerHeight*2)){
+        $('body').addClass('main-section-away');
+      }else{
+        $('body').removeClass('main-section-away');
+      }
+      /*Add class if main section is scrolled away - end*/
+      
     }
   }, 100);
   /*Scroll - end*/

@@ -41,7 +41,7 @@
   --custom-list-icon-2: url('../img/icon/lifestyle/list-icon.svg');
   --hyperhidrosis-main-bg:url('../img/banners/model-with-headset.jpg?v=1.1');
   --diagnosis-main-bg:url('../img/banners/diagnosis-section.jpg');
-  --complications-main-bg:url('../img/banners/complications-section.jpg');
+  --complications-main-bg:url('../img/banners/complications-section-v1.jpg');
   --complications-block-bg:url('../img/bg/comp-block-bg.svg');
   --description-highlight-bg:url('../img/bg/description-highlight-bg.svg');
   --primary-secondary-bg:var(--description-highlight-bg);
@@ -67,6 +67,7 @@ html[dir="rtl"]{
   --bs-body-font-family: 'Aligarh Arabic';
   --bs-title-font-family: 'Aligarh Arabic';
 }
+html[dir="rtl"] ol{list-style: arabic-indic;}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
   font-family: var(--bs-title-font-family);
 }
@@ -757,6 +758,8 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   color: var(--theme-primary-color);
   overflow-x: hidden;
 }
+.navbar-brand,.aa-logo{padding-left: 0.5rem;}
+html[lang="en"] .text-start>p{text-align: left;}
 @media (max-width: 991.98px) {
   .main-menu{
     -webkit-transition: all 0.5s ease;
@@ -947,6 +950,9 @@ html[dir="rtl"] .campaign-visual-floating-logo{
     max-height: 100vh;
     object-position: bottom;
   }
+  .main-section-away .video-full-width-fixed .video-block video{
+    max-height: 75vh;
+  }
   .add-full-vh{
     padding-top: 4rem;
   }
@@ -993,8 +999,8 @@ html[dir="rtl"] .campaign-visual-floating-logo{
   }
   .complications-main-bg:before{
     background-image: var(--complications-main-bg);
-    background-size: contain;
-    background-position: right;
+    background-size: cover;
+    background-position: center;
   }
   html[dir="rtl"] .complications-main-bg:before{
     left: 0;right: auto;
