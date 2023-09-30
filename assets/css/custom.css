@@ -950,8 +950,19 @@ html[lang="en"] .text-start>p{text-align: left;}
     max-height: 100vh;
     object-position: bottom;
   }
-  .main-section-away .video-full-width-fixed .video-block video{
-    max-height: 75vh;
+  .video-full-width-fixed .video-block:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0vh;
+    width: 100%;
+    background-color: var(--theme-primary-color);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  body.main-section-away .video-full-width-fixed .video-block:before{
+    height: 25vh;
   }
   .add-full-vh{
     padding-top: 4rem;
@@ -967,7 +978,7 @@ html[lang="en"] .text-start>p{text-align: left;}
     left: 50%;
     width: 2rem;
     height: 2rem;
-    -webkit-ransform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     bottom: 1.6rem;
     z-index: 1;
