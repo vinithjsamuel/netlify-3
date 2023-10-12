@@ -97,7 +97,7 @@ $( document ).ready(function() {
         $('body').removeClass('main-section-away');
       }
       /*Add class if main section is scrolled away - end*/
-      
+
     }
   }, 100);
   /*Scroll - end*/
