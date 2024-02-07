@@ -760,6 +760,10 @@ html[dir="rtl"] .campaign-visual-floating-logo{
 }
 .navbar-brand,.aa-logo{padding-left: 0.5rem;}
 html[lang="en"] .text-start>p{text-align: left;}
+.qr-block img{height: 125px;width: auto;}
+.font-family-en{
+  font-family: var(--bs-body-font-family);
+}
 @media (max-width: 991.98px) {
   .main-menu{
     -webkit-transition: all 0.5s ease;
